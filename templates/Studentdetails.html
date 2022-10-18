@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        color:blue;
+        background-color: seagreen;
+    }
+    th{
+        color:ghostwhite;
+    }
+</style>
+<body>
+    <center>
+        <h1>Studentdetails</h1>
+        <table border="3px">
+            <tr>
+                <th>name</th>
+                <th>username</th>
+                <th>city</th>
+                <th>grade</th>
+                <th>url</th>
+                <th>date</th>
+            </tr>
+            {% for i in Studentdetails %}
+                <tr>
+                    <td>{{i.name}}</td>
+                    <td>{{i.username}}</td> 
+                    <td>{{i.city}}</td>
+                    <td>{{i.grade}}</td>
+                    <td>{{i.url}}</td>
+                    <td>{{i.date}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
